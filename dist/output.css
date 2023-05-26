@@ -569,6 +569,14 @@ video {
   max-width: 500px;
 }
 
+.list-disc {
+  list-style-type: disc;
+}
+
+.list-decimal {
+  list-style-type: decimal;
+}
+
 .flex-col {
   flex-direction: column;
 }
