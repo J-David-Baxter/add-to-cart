@@ -15,8 +15,6 @@ const addButton = document.getElementById("add-button");
 const inputField = document.getElementById("input-field");
 const cartList = document.getElementById('cart-list');
 
-console.log(cartList);
-
 // Load data from database
 cartList.childElementCount < 1 && loadInitialData(itemsInDB, cartList);
 
