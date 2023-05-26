@@ -11,7 +11,7 @@ export function renderNewItemToList(list, newItem) {
 export function loadInitialData(database, list) {
     onValue(database, function(snapshot) {
         const items = Object.values(snapshot.val());
-        
+        list.innerHTML = "";
         items.forEach(item => renderNewItemToList(list, item));
     })
 }

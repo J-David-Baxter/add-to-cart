@@ -16,13 +16,11 @@ const inputField = document.getElementById("input-field");
 const cartList = document.getElementById('cart-list');
 
 // Load data from database
-cartList.childElementCount < 1 && loadInitialData(itemsInDB, cartList);
+loadInitialData(itemsInDB, cartList);
 
 // Add new item to database and render to page
 addButton.addEventListener('click', () => {
     let inputValue = inputField.value;
     push(itemsInDB, inputValue);
-    renderNewItemToList(cartList, inputValue);
-    
     clearInputField(inputField);
 });
