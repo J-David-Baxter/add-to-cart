@@ -9,16 +9,16 @@ const appSettings = {
 const app = initializeApp(appSettings);
 const database = getDatabase(app);
 const itemsInDB = ref(database, "cartItems");
-let dataIsLoaded = false;
 
 // HTML elements
 const addButton = document.getElementById("add-button");
 const inputField = document.getElementById("input-field");
 const cartList = document.getElementById('cart-list');
 
+console.log(cartList);
+
 // Load data from database
-!dataIsLoaded && loadInitialData(itemsInDB, cartList);
-dataIsLoaded = true;
+cartList.childElementCount < 1 && loadInitialData(itemsInDB, cartList);
 
 // Add new item to database and render to page
 addButton.addEventListener('click', () => {
