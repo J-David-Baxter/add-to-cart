@@ -16,6 +16,7 @@ const addButton = document.getElementById("add-button");
 const inputField = document.getElementById("input-field");
 const cartList = document.getElementById("cart-list");
 
+
 // Load data from database
 loadData(itemsInDB, cartList);
 
@@ -24,4 +25,9 @@ addButton.addEventListener('click', () => {
     let inputValue = inputField.value;
     push(itemsInDB, inputValue);
     clearInputField(inputField);
+    addButton.disabled = true;
 });
+
+inputField.addEventListener('keyup', () => {
+    addButton.disabled = inputField.value.length === 0;
+})
