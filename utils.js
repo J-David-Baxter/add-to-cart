@@ -4,14 +4,18 @@ export function clearInputField(field) {
     field.value = "";
 }
 
-export function renderNewItemToList(list, newItem) {
+function renderNewItemToList(list, newItem) {
     list.innerHTML += `<li>${newItem}</li>`;
 }
 
-export function loadData(database, list) {
-    onValue(database, function(snapshot) {
+function clearList(list) {
+    list.innerHTML = "";
+}
+
+export function loadData(databaseRef, list) {
+    onValue(databaseRef, function(snapshot) {
         const items = Object.values(snapshot.val());
-        list.innerHTML = "";
+        clearList(list);
         items.forEach(item => renderNewItemToList(list, item));
     })
 }
