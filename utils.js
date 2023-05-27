@@ -5,7 +5,7 @@ export function clearInputField(field) {
 }
 
 function renderNewItemToList(list, newItem) {
-    list.innerHTML += `<li>${newItem}</li>`;
+    list.innerHTML += `<li class="p-5 border border-sky-500">${newItem}</li>`;
 }
 
 function clearList(list) {
