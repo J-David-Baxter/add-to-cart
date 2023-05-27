@@ -25,6 +25,7 @@ addButton.addEventListener('click', () => {
     push(itemsInDB, inputValue);
     clearInputField(inputField);
     addButton.disabled = true;
+    inputField.focus();
 });
 
 inputField.addEventListener('keyup', () => {
