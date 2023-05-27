@@ -39,10 +39,16 @@ button {
     text-align: center;
     font-family: 'Rubik', sans-serif;
     cursor: pointer;
+    transition: scale .1s ease-in-out;
+}
+
+button:hover {
+    scale: 1.1;
 }
 
 button:disabled {
     opacity: 0.5;
+    scale: 1;
 }
 
 ul {

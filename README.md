@@ -4,6 +4,6 @@
 
 ### Technologies
 - HTML
-- Tailwind CSS
+- CSS
 - JavaScript
 - Firebase

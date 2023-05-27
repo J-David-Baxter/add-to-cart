@@ -16,7 +16,6 @@ const addButton = document.getElementById("add-button");
 const inputField = document.getElementById("input-field");
 const cartList = document.getElementById("cart-list");
 
-
 // Load data from database
 loadData(itemsInDB, cartList);
 
