@@ -1,10 +1,11 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 import { clearInputField, loadData } from "./utils.js";
+import { DATABASE_URL } from "./constants.js";
 
 // Initialize app
 const appSettings = {
-    databaseURL: "https://add-to-cart-2a286-default-rtdb.firebaseio.com/"
+    databaseURL: DATABASE_URL
 };
 const app = initializeApp(appSettings);
 const database = getDatabase(app);
