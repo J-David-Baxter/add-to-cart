@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-import { clearInputField, renderNewItemToList, loadInitialData } from "./utils.js";
+import { clearInputField, loadData } from "./utils.js";
 
 // Initialize app
 const appSettings = {
@@ -13,12 +13,12 @@ const itemsInDB = ref(database, "cartItems");
 // HTML elements
 const addButton = document.getElementById("add-button");
 const inputField = document.getElementById("input-field");
-const cartList = document.getElementById('cart-list');
+const cartList = document.getElementById("cart-list");
 
 // Load data from database
-loadInitialData(itemsInDB, cartList);
+loadData(itemsInDB, cartList);
 
-// Add new item to database and render to page
+// Add new item to database
 addButton.addEventListener('click', () => {
     let inputValue = inputField.value;
     push(itemsInDB, inputValue);
