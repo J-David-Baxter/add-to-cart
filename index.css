@@ -76,3 +76,8 @@ ul li:hover {
     background-color: #AC485A;
     color: #FDFDFD;
 }
+
+.no-items-text {
+    margin: 50px auto;
+    opacity: 0.5;
+}
