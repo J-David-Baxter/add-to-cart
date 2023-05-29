@@ -1,4 +1,4 @@
-import { onValue, ref, remove, update } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import { onValue, ref, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 import { database } from "./index.js";
 
 export function clearInputField(field) {
@@ -26,7 +26,7 @@ function renderNoItemsNotification(list) {
 
 export function loadData(databaseRef, list) {
     onValue(databaseRef, function(snapshot) {
-        if (snapshot.val()) {
+        if (snapshot.exists()) {
             const items = Object.entries(snapshot.val());
             clearList(list);
             items.forEach(item => {
