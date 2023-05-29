@@ -21,13 +21,12 @@ loadData(itemsInDB, cartList);
 
 // Add new item to database
 addButton.addEventListener('click', () => {
-    let inputValue = inputField.value;
-    push(itemsInDB, inputValue);
+    let inputValue = inputField.value.trim();
+    if (inputValue) { push(itemsInDB, inputValue) };
     clearInputField(inputField);
-    addButton.disabled = true;
     inputField.focus();
 });
 
-inputField.addEventListener('keyup', () => {
-    addButton.disabled = inputField.value.length === 0;
-})
+// inputField.addEventListener('keyup', () => {
+//     addButton.disabled = inputField.value.length === 0;
+// })
