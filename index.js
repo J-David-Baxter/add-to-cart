@@ -8,7 +8,7 @@ const appSettings = {
     databaseURL: DATABASE_URL
 };
 const app = initializeApp(appSettings);
-const database = getDatabase(app);
+export const database = getDatabase(app);
 const itemsInDB = ref(database, "cartItems");
 
 // HTML elements

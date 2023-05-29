@@ -1,16 +1,17 @@
-import { onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import { onValue, ref, remove, update } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import { database } from "./index.js";
 
 export function clearInputField(field) {
     field.value = "";
 }
 
-function renderNewItemToList(list, newItem, id) {
-    // list.innerHTML += `<li id=${id}>${newItem}</li>`;
+function renderNewItemToList(list, value, id) {
     const liElement = document.createElement("li");
-    liElement.innerText = newItem;
-    liElement.id = id;
-    liElement.addEventListener('click', (e) => {
-        console.log(e.target.id);
+    liElement.textContent = value;
+    liElement.style.userSelect = "none";
+    liElement.addEventListener('dblclick', (e) => {
+        let itemInDB = ref(database, `cartItems/${id}`);
+        remove(itemInDB);
     })
     list.append(liElement);
 }
