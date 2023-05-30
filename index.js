@@ -19,5 +19,4 @@ addButton.addEventListener('click', () => {
     let inputValue = inputField.value.trim();
     if (inputValue) { push(itemsInDB, inputValue) };
     clearInputField(inputField);
-    inputField.focus();
 });

@@ -8,7 +8,7 @@ export function clearInputField(field) {
 function renderNewItemToList(list, value, id) {
     const liElement = document.createElement("li");
     liElement.textContent = value;
-    liElement.addEventListener('click', () => {
+    liElement.addEventListener('dblclick', () => {
         let itemLocationInDB = ref(database, `cartItems/${id}`);
         remove(itemLocationInDB);
     })
