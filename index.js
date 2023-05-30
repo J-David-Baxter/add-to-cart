@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getDatabase, ref, push, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-import { clearInputField, loadData, emptyCart, disableEmptyCartButton } from "./utils.js";
+import { clearInputField, loadData, emptyCart } from "./utils.js";
 
 const appSettings = {
     databaseURL: "https://add-to-cart-2a286-default-rtdb.firebaseio.com/"
