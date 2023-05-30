@@ -11,6 +11,7 @@ html, body {
     flex-direction: column;
     max-width: 320px;
     margin: 30px auto;
+    gap: 10px;
 }
 
 img {
@@ -27,7 +28,6 @@ input {
     font-size: 20px;
     text-align: center;
     font-family: 'Rubik', sans-serif;
-    margin: 10px 0;
 }
 
 button {

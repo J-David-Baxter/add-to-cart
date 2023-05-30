@@ -38,3 +38,7 @@ export function loadData(databaseRef, list) {
         }
     })
 }
+
+export function emptyCart(databaseRef) {
+    remove(databaseRef);
+}
